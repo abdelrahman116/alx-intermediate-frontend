@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid and Flexbox Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-4">
+    <!-- Header -->
+    <header class="bg-blue-500 text-white p-4">
+      <h1 class="text-3xl">Grid and Flexbox Layout</h1>
+    </header>
+
+    <!-- Main Grid -->
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+      <!-- Flexbox Section (2/3 width on lg) -->
+      <section class="lg:col-span-2 flex flex-wrap gap-4">
+        <div class="p-4 bg-red-400 flex-1">Flexbox Item 1</div>
+        <div class="p-4 bg-red-200 flex-1">Flexbox Item 2</div>
+      </section>
+
+      <!-- Sidebar (1/3 width on lg) -->
+      <aside class="bg-green-200 p-4">Sidebar</aside>
+
+      <!-- Full-width Image Grid (Responsive) -->
+      <section class="col-span-full grid grid-cols-1 custom:grid-cols-3 gap-4">
+        <img
+          class="w-full h-auto object-cover"
+          src="./src/Apples.jpg"
+          alt="Apples"
+        />
+        <img
+          class="w-full h-auto object-cover"
+          src="./src/Barry.jpg"
+          alt="Barry"
+        />
+        <img
+          class="w-full h-auto object-cover"
+          src="./src/Fruit-salad.jpg"
+          alt="Fruit Salad"
+        />
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 mt-4">
+      <p>&copy; 2024 John Doe's Blog</p>
+    </footer>
+
+    <!-- Tailwind Custom Breakpoint -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              custom: "900px", // Now 'custom' acts as 900px breakpoint
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>
