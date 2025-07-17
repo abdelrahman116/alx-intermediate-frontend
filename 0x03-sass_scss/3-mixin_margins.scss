@@ -1,0 +1,11 @@
+@mixin left_right($pixel) {
+  margin-left: $pixel px;
+  margin-right: $pixel px;
+}
+
+body {
+  @include left-right(10);
+}
+div {
+  @include left-right(15);
+}
